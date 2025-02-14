@@ -155,8 +155,8 @@ const contentLp01 = {
         serviço prestado. Meu objetivo é proteger seus direitos com a máxima
         eficiência e seriedade. <br />
         <br /> Seja qual for a sua necessidade previdenciária, estou aqui para
-        encontrar a melhor solução. Entre em contato com a Dra Tábatha Siqueira
-        e descubra como podemos ser determinantes na defesa dos seus direitos.
+        encontrar a melhor solução. Entre em contato com a Dra Tábatha Siquara e
+        descubra como podemos ser determinantes na defesa dos seus direitos.
       </p>
     ),
     buttonLabel: "Quero falar com um especialista",
