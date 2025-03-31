@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom";
 import Index from "./pages/Index.jsx";
-// sobe codigo sem erro
 
 import "./index.css";
 import "./styles/backgrounds.css";
