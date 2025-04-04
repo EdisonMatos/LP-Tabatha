@@ -1,5 +1,8 @@
 import logo from "../assets/imgs/logo/logo.webp";
-import heroImg from "../assets/imgs/hero/lawHero.jpg";
+import heroImg from "../assets/imgs/hero/bgHero.jpg";
+import heroLargeImg from "../assets/imgs/hero/bgLargeHero.jpg"
+import heroImgPhone from "../assets/imgs/hero/person.png";
+import backgroundPerson from "../assets/imgs/hero/backgroundPerson.jpg"
 import imgFeatures from "../assets/imgs/features/imgServices.webp";
 import aboutImg1 from "../assets/imgs/about/imgAbout.jpg";
 import aboutSocial from "../assets/imgs/about/aboutSocial.jpg";
@@ -105,6 +108,9 @@ const content = {
       subtitle:
         "Com ética e expertise, ofereço soluções jurídicas eficazes para proteger o que é mais importante para você.",
       heroImg: heroImg,
+      heroLargeImg: heroLargeImg,
+      heroImgPhone: heroImgPhone, // img da pessoa mobile
+      backgroundPerson: backgroundPerson,
       ctaButtonText: "Entre em contato",
       obsHero: {
         icon: (

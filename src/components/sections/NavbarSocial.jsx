@@ -1,15 +1,17 @@
-import { useState, useEffect, useRef } from "react";
-import Navbar from "../sectionElements/Navbar";
-import ListGroupSocial from "../sectionElements/ListGroupSocial";
-import { Link as ScrollLink } from "react-scroll";
-import SidebarSocial from "../sectionElements/SidebarSocial";
+
 import content from "../../content/content";
 import Button from "../interactives/Button";
 import { FaWhatsapp } from "react-icons/fa";
+import Navbar from "../sectionElements/Navbar";
+import { useNavigate } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+import { useState, useEffect, useRef } from "react";
+import SidebarSocial from "../sectionElements/SidebarSocial";
+import ListGroupSocial from "../sectionElements/ListGroupSocial";
 
-const whatsappContactLink = `${content.texts.links.ctaWhatsapp}`;
+export default function NavbarSocial({ LightMode }) {
+  const navigate = useNavigate();
 
-export default function  NavbarSocial({ LightMode }) {
   const [scrolling, setScrolling] = useState(false);
   const [showListGroup, setShowListGroup] = useState(true);
   const [showSidebar, setShowSidebar] = useState(false);
@@ -35,7 +37,7 @@ export default function  NavbarSocial({ LightMode }) {
         setTimeout(() => {
           setShowSidebar(false);
           setIsAnimating(false);
-        }, 950); 
+        }, 940);
       } else {
         setShowSidebar(true);
         setTimeout(() => {
@@ -84,17 +86,17 @@ export default function  NavbarSocial({ LightMode }) {
         className={`fixed z-20 w-full transition-colors duration-1000 ${
           LightMode
             ? scrolling
-              ? "bg-white  shadow-md"
-              : "bg-transparent"
+              ? "bg-white shadow-md"
+              : "desktop1:bg-black/20"
             : scrolling
             ? "bg-gradient-to-b from-black to-bgSectionDark bg-opacity-100 shadow-lg transition-all duration-1000 border-b-[1px] border-primary"
-            : "transition-colors duration-1000 border-b-[1px] border-transparent border-black"
+            : "bg-gradient-to-b black to-transparent transition-colors duration-1000 border-b-[1px] border-none "
         }`}
       >
         <Navbar>
           <ScrollLink
             to="home"
-            className="cursor-pointer"
+            className="cursor-pointer w-[45%] phone2:w-[50%] phone3:w-[45%] tablet1:w-[30%] tablet2:w-[25%] desktop1:w-[25%] desktop2:max-w-[200px]"
             spy={true}
             smooth={true}
             duration={500}
@@ -107,11 +109,11 @@ export default function  NavbarSocial({ LightMode }) {
               className={`${
                 LightMode
                   ? scrolling
-                    ? "bg-transparent w-[50%] tablet1:w-[50%] tablet2:w-[40%] desktop1:w-[60%] desktop2:w-[60%] transition-all duration-1000"
-                    : "bg-white w-[64%] my-[20px] tablet1:w-[55%] tablet2:w-[47%] desktop1:w-[60%] desktop2:w-[70%] px-3 py-3 transition-all duration-1000"
+                    ? "bg-transparent w-[80%] tablet1:w-[70%] tablet2:w-[80%] desktop1:w-[70%] px-3 py-3 desktop2:w-[80%] transition-all duration-1000"
+                    : " w-full my-[20px] phone3:max-w-[180px] tablet1:w-[90%] desktop1:w-[80%] desktop2:w-[90%] px-3 py-3 transition-all duration-1000"
                   : scrolling
-                  ? "bg-transparent w-[50%] tablet1:w-[50%] tablet2:w-[40%] desktop1:w-[60%] desktop2:w-[60%] transition-all duration-1000"
-                  : "bg-transparent w-[64%] my-[20px] tablet1:w-[55%] tablet2:w-[47%] desktop1:w-[60%] desktop2:w-[70%] transition-all duration-1000"
+                  ? "bg-transparent w-[70%] phone3:w-[60%] tablet1:w-[80%] tablet2:w-[70%] desktop1:w-[80%] desktop2:w-[80%] transition-all duration-1000"
+                  : "bg-transparent my-[20px] w-full transition-all duration-1000"
               } tablet3:mb-0`}
             />
           </ScrollLink>
@@ -124,7 +126,8 @@ export default function  NavbarSocial({ LightMode }) {
               <Button
                 aria-label={content.texts.hero.ctaButtonAriaLabel}
                 label={content.texts.navbar.ctaButtonTextResponsive}
-                buttonLink={whatsappContactLink}
+                onClick={() => navigate("/whatsapp")}
+                // buttonLink={content.texts.links.ctaWhatsapp}
                 className={`${scrolling ? "" : ""}`}
                 size="small"
                 icon={<FaWhatsapp />}
