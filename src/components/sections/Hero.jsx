@@ -6,7 +6,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import SectionArea from "../sectionElements/SectionArea";
 import SectionWrapper from "../sectionElements/SectionWrapper";
-// comentario para subir codigo
 
 
 export default function HeroPersonImg({ appDownloadButtons }) {
