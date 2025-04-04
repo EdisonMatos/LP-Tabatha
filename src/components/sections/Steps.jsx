@@ -25,18 +25,13 @@ export default function Steps() {
       {/* <SectionShapeDiv shapeDivArrow shapeColor="text-white"/> */}
       <SectionWrapper className="flex flex-col desktop1:flex-row-reverse gap-[40px] desktop2:gap-0 desktop1:justify-between">
         <MotionDivDownToUp className="w-[100%] desktop1:w-[415px] desktop2:w-[485px] flex justify-center">
-          <div
-            style={{
-              backgroundImage: `url(${content.texts.steps.img})`,
-            }}
-            className="shadow-custom-opacity shadow-darker/25 relative desktop1:bg-center bg-no-repeat bg-cover h-[350px] w-[90%] tablet1:w-full tablet1:h-[800px] desktop1:h-[467px] rounded-xl"
-          >
-            {/* <img
-              alt="Imagem de efeito pontilhado"
-              src={imgPoints}
-              className="absolute opacity-30 right-[-10px] top-[20px] desktop1:right-[-40px] desktop1:top-[40px]"
-            ></img> */}
-          </div>
+          <MotionDivDownToUp className="relative w-[90%] desktop1:w-[415px] desktop2:w-[450px] flex justify-center rounded-xl shadow-custom-opacity shadow-black/30">
+            <img
+              src={content.texts.steps.img}
+              alt={content.texts.steps.img}
+              className="w-[100%] desktop1:w-[415px] desktop2:w-[485px] rounded-xl"
+            />
+          </MotionDivDownToUp>
           {/* <img
             src={content.texts.steps.imgSteps}
             alt="Imagem de pessoa de férias em um passeio de barco em Arraial do Cabo"
